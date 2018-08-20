@@ -142,7 +142,7 @@ table 123456701 "CSD Seminar"
         //CommentLine.DeleteAll;
     end;
 
-AssistEdit() : Boolean; 
+procedure AssistEdit() : Boolean; 
     begin 
         with Seminar do begin 
             Seminar:=Rec; 
