@@ -65,7 +65,7 @@ codeunit 123456799 InstallSeminar
         SourceCode.Code := 'SEMINAR';
         if SourceCode.Insert then;
         SourceCodeSetup.get;
-        SourceCodeSetup."CSD Seminar" := 'SEMINAR';
+        //SourceCodeSetup."CSD Seminar" := 'SEMINAR';
         SourceCodeSetup.modify;
     end;
 
@@ -103,30 +103,30 @@ codeunit 123456799 InstallSeminar
 
     local procedure CreateSeminarRegistration();
     var
-        SemRegHead: Record "CSD Seminar Reg. Header";
-        SemRegLine: Record "CSD Seminar Registration Line";
+       // SemRegHead: Record "CSD Seminar Reg. Header";
+       // SemRegLine: Record "CSD Seminar Registration Line";
 
     begin
-        SemRegHead.init;
-        SemRegHead.Insert(true);
-        SemRegHead.Validate("Seminar No.", '80040');
-        SemRegHead.Validate("Instructor Resource No.", 'INSTR');
-        SemRegHead.Validate("Starting Date", calcdate('<+1w-cw>', WorkDate));
-        SemRegHead.Validate("Room Resource No.", 'ROOM 01');
-        SemRegHead.Modify;
-        SemRegLine.Init;
-        SemRegLine."Document No." := SemRegHead."No.";
-        SemRegLine."Line No." := 10000;
-        SemRegLine.validate("Bill-to Customer No.", '01121212');
-        SemRegLine.Validate("Participant Contact No.", 'CT000018');
-        SemRegLine.insert;
-        SemRegLine."Line No." := 20000;
-        SemRegLine.validate("Bill-to Customer No.", '01121212');
-        SemRegLine.Validate("Participant Contact No.", 'CT100132');
-        SemRegLine.insert;
+        //SemRegHead.init;
+        //SemRegHead.Insert(true);
+        //SemRegHead.Validate("Seminar No.", '80040');
+        //SemRegHead.Validate("Instructor Resource No.", 'INSTR');
+        //SemRegHead.Validate("Starting Date", calcdate('<+1w-cw>', WorkDate));
+        //SemRegHead.Validate("Room Resource No.", 'ROOM 01');
+        //SemRegHead.Modify;
+        //SemRegLine.Init;
+        //SemRegLine."Document No." := SemRegHead."No.";
+        //SemRegLine."Line No." := 10000;
+        //SemRegLine.validate("Bill-to Customer No.", '01121212');
+        //SemRegLine.Validate("Participant Contact No.", 'CT000018');
+        //SemRegLine.insert;
+        //SemRegLine."Line No." := 20000;
+        //SemRegLine.validate("Bill-to Customer No.", '01121212');
+        //SemRegLine.Validate("Participant Contact No.", 'CT100132');
+        //SemRegLine.insert;
 
     end;
-
+    
     var
         SetupExists: Boolean;
 }
