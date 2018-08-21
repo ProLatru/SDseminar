@@ -18,8 +18,13 @@ table 123456700 "CSD Seminar Setup"
         }
         field(30;"Seminar Registration Nos.";Code[20])
         {
-            Caption = 'Posted Seminar Reg. Nos.';
+            Caption = 'Seminar Registration Nos.';
             TableRelation = "No. Series";
+        }
+        field(40;"Posted Seminar Reg. Nos.";code[20]) 
+        { 
+            Caption = 'Posted Seminar Reg. Nos.'; 
+            TableRelation = "No. Series"; 
         }
 
     }
