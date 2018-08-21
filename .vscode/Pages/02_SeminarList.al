@@ -7,7 +7,7 @@ page 123456702"CSD Seminar List"
     SourceTable = "CSD Seminar";
     Editable = false;
     CardPageId = 123456701;
-    UsageCategory = Lists;
+    UsageCategory = Tasks;
 
     layout
     {
